@@ -1,0 +1,54 @@
+\section{mystring.h File Reference}
+\label{mystring_8h}\index{mystring.h@{mystring.h}}
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+char $\ast$ \bf{mystrdup} (const char $\ast$src)
+\item 
+size\_\-t \bf{mystrlen} (const char $\ast$s)
+\begin{CompactList}\small\item\em Finds the length of the null terminated string. \item\end{CompactList}\item 
+char $\ast$ \bf{mystrcpy} (char $\ast$dest, const char $\ast$src)
+\begin{CompactList}\small\item\em Copy the string to a destination string. \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Function Documentation}
+\index{mystring.h@{mystring.h}!mystrcpy@{mystrcpy}}
+\index{mystrcpy@{mystrcpy}!mystring.h@{mystring.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ mystrcpy (char $\ast$ {\em dest}, const char $\ast$ {\em src})}\label{mystring_8h_515b2c58f31e99a4564e463ffbf73e2f}
+
+
+Copy the string to a destination string. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em $\ast$dest}]pointer to destination string. \item[{\em $\ast$src}]pointer to source string. \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]The destination string. \end{Desc}
+\index{mystring.h@{mystring.h}!mystrdup@{mystrdup}}
+\index{mystrdup@{mystrdup}!mystring.h@{mystring.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ mystrdup (const char $\ast$ {\em src})}\label{mystring_8h_148a52c665d88f52fb4995338a319d3c}
+
+
+Duplicates a C-style string. \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em src}]Pointer to string to be copied \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]Pointer to freshly-allocated string containing a duplicate of src or null if no memory is available \end{Desc}
+\index{mystring.h@{mystring.h}!mystrlen@{mystrlen}}
+\index{mystrlen@{mystrlen}!mystring.h@{mystring.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}size\_\-t mystrlen (const char $\ast$ {\em s})}\label{mystring_8h_a231246d7f6f97231aa18689cc2ea20a}
+
+
+Finds the length of the null terminated string. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em s}]The string to determine length. \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]The length of the string. \end{Desc}
