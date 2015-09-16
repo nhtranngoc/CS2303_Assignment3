@@ -6,3 +6,4 @@
 // Function prototype(s):
 char* mystrdup(const char* src);
 size_t mystrlen(const char* s);
+char* mystrcpy(char *dest, const char *src);

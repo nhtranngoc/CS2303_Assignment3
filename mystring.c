@@ -24,20 +24,38 @@ char* mystrdup(const char* src) {
   if (newstr == 0) return (char *) 0;
 
   // Otherwise, copy the string and return pointer to new string
-  strcpy(newstr, src);
+  mystrcpy(newstr, src);
   return newstr;
 }
 
 /**
- * @brief Finds the length of the null terminated string
+ * @brief Finds the length of the null terminated string.
  * @param s The string to determine length.
  * @return The length of the string.
  */
 size_t mystrlen(const char* s){
     const char* nextChar;
     nextChar = s;
-    while (*nextChar != '\0'){ //Add to nextChar until hit a Null character
+    while (*nextChar != '\0'){ //Add to nextChar until hit a Null character.
         ++nextChar;
     }
     return nextChar - s;
+}
+
+/**
+ * @brief Copy the string to a destination string.
+ * @param *dest pointer to destination string.
+ * @param *src pointer to source string.
+ * @return The destination string.
+ */
+char* mystrcpy(char *dest, const char *src){
+  const char* nextChar;
+    nextChar = src;
+    while(*nextChar != '\0'){ //Add to nextChar and dest until hit a Null character.
+        *dest = *nextChar;
+        ++nextChar;
+        ++dest;
+    }
+    *dest = *nextChar;
+  return dest;
 }
