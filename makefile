@@ -10,3 +10,7 @@ mystring.o: mystring.c mystring.h
 clean: 
 	rm -f mystring.o ctest.o ctest
 
+docs:
+	doxygen
+	chmod 744 html/*
+	cp -rp html/* ~/public_html/cs2303assig3/
