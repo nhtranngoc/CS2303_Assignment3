@@ -30,18 +30,15 @@ char* mystrdup(const char* src) {
 
 /**
  * @brief Finds the length of the null terminated string
- *
  * @param s The string to determine length.
- *
  * @return The length of the string.
  */
-size_t mystrlen(const char* s)
-{
-    const char* char_next;
-    char_next = s;
-    while (*char_next != '\0')
+size_t mystrlen(const char* s){
+    const char* nextChar;
+    nextChar = s;
+    while (*nextChar != '\0') //Add to nextChar until hit a Null character
     {
-        ++char_next;
+        ++nextChar;
     }
-    return char_next - s;
+    return nextChar - s;
 }
