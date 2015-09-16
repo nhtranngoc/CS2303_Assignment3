@@ -5,3 +5,4 @@
 
 // Function prototype(s):
 char* mystrdup(const char* src);
+size_t mystrlen(const char* s);

@@ -17,7 +17,7 @@ char* mystrdup(const char* src) {
   int length; // Length of the source string
   char* newstr; // Pointer to memory which will hold new string
 
-  length = strlen(src) + 1;  // Leave space for the terminator
+  length = mystrlen(src) + 1;  // Leave space for the terminator
   newstr = (char*) malloc(length); // Must cast!
 
   // If no memory was available, return null pointer immediately
@@ -26,4 +26,22 @@ char* mystrdup(const char* src) {
   // Otherwise, copy the string and return pointer to new string
   strcpy(newstr, src);
   return newstr;
+}
+
+/**
+ * @brief Finds the length of the null terminated string
+ *
+ * @param s The string to determine length.
+ *
+ * @return The length of the string.
+ */
+size_t mystrlen(const char* s)
+{
+    const char* char_next;
+    char_next = s;
+    while (*char_next != '\0')
+    {
+        ++char_next;
+    }
+    return char_next - s;
 }
