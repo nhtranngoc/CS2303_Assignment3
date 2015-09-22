@@ -59,3 +59,48 @@ char* mystrcpy(char *dest, const char *src){
     *dest = *nextChar;
   return dest;
 }
+
+/**
+ * @brief Appends the src string to the dest string, overwriting terminating null 
+ * byte at the end of dest, and adds a terminating null byte.
+ * 
+ * @param dest String to be appended.
+ * @param src String to append to.
+ * 
+ * @return A concatenated string from src and dest.
+ */
+char* mystrcat(char *dest, const char *src){
+  char* nextChar= dest;
+
+  while(*dest != '\0') ++dest;
+  while(*src != '\0'){
+    *dest = *src;
+    ++src;
+    ++dest;
+  }
+  *dest= '\0';
+  return nextChar;
+}
+
+/**
+ * @brief ppends the src string to the dest string, overwriting terminating null 
+ * byte at the end of dest, and adds a terminating null byte- however, this function uses at
+ * most n bytes from src.
+ * @param dest String to be appended.
+ * @param src String to append to.
+ * @param n Max number of bytes to append.
+ * @return A concatenated string from src and dest, at a limit of n.
+ */
+char* mystrncat(char *dest, const char *src, size_t n){
+  char* nextChar= dest;
+
+  while(*dest != '\0') ++dest;
+  int i;
+  for(i=0; i< n; i++){
+    *dest = *src;
+    ++src;
+    ++dest;
+  }
+  *dest= '\0';
+  return nextChar;
+}

@@ -39,20 +39,20 @@ int main()
   a1[MAX_CHARS] = '\0';
 
   // Concatenate two character arrays, then print.
-  strcat(a1, a2);
+  mystrcat(a1, a2);
   printf("Concatenating a2 to the end of a1\n");
   printf("a1 = %s\n", a1);
 
   // Concatenate two character arrays safely, then print.
   copy_limit = MAX_CHARS - strlen(a1); // How much space is left?
   printf("Concatenating a2 to the end of a1, with copy_limit = %d\n",copy_limit);
-  if (copy_limit > 0) strncat(a1, a2, copy_limit);
+  if (copy_limit > 0) mystrncat(a1, a2, copy_limit);
   printf("a1 = %s\n", a1);
 
   // Concatenate two character arrays safely, then print.
   copy_limit = MAX_CHARS - strlen(a1); // How much space is left?
   printf("Concatenating a3 to the end of a1, with copy_limit = %d\n",copy_limit);
-  if (copy_limit > 0) strncat(a1, a3, copy_limit);
+  if (copy_limit > 0) mystrncat(a1, a3, copy_limit);
   printf("a1 = %s\n", a1);
 
   // Duplicate a string, using my function, then print

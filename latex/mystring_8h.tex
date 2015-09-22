@@ -1,0 +1,92 @@
+\section{mystring.\-h File Reference}
+\label{mystring_8h}\index{mystring.\-h@{mystring.\-h}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ {\bf mystrdup} (const char $\ast$src)
+\item 
+size\-\_\-t {\bf mystrlen} (const char $\ast$s)
+\begin{DoxyCompactList}\small\item\em Finds the length of the null terminated string. \end{DoxyCompactList}\item 
+char $\ast$ {\bf mystrcpy} (char $\ast$dest, const char $\ast$src)
+\begin{DoxyCompactList}\small\item\em Copy the string to a destination string. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{mystring.\-h@{mystring.\-h}!mystrcpy@{mystrcpy}}
+\index{mystrcpy@{mystrcpy}!mystring.h@{mystring.\-h}}
+\subsubsection[{mystrcpy}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ mystrcpy (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{dest, }
+\item[{const char $\ast$}]{src}
+\end{DoxyParamCaption}
+)}\label{mystring_8h_a515b2c58f31e99a4564e463ffbf73e2f}
+
+
+Copy the string to a destination string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $\ast$dest} & pointer to destination string. \\
+\hline
+{\em $\ast$src} & pointer to source string. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The destination string. 
+\end{DoxyReturn}
+
+
+Referenced by mystrdup().
+
+\index{mystring.\-h@{mystring.\-h}!mystrdup@{mystrdup}}
+\index{mystrdup@{mystrdup}!mystring.h@{mystring.\-h}}
+\subsubsection[{mystrdup}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ mystrdup (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{src}
+\end{DoxyParamCaption}
+)}\label{mystring_8h_a148a52c665d88f52fb4995338a319d3c}
+\doxyref{mystring.\-h}{p.}{mystring_8h} \begin{DoxyAuthor}{Author}
+Mike Ciaraldi My own versions of some of the C-\/style string functions
+\end{DoxyAuthor}
+\doxyref{mystring.\-c}{p.}{mystring_8c} \begin{DoxyAuthor}{Author}
+Mike Ciaraldi My own versions of some of the C-\/style string functions Duplicates a C-\/style string. 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em src} & Pointer to string to be copied \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to freshly-\/allocated string containing a duplicate of src or null if no memory is available 
+\end{DoxyReturn}
+
+
+References mystrcpy(), and mystrlen().
+
+
+
+Referenced by main().
+
+\index{mystring.\-h@{mystring.\-h}!mystrlen@{mystrlen}}
+\index{mystrlen@{mystrlen}!mystring.h@{mystring.\-h}}
+\subsubsection[{mystrlen}]{\setlength{\rightskip}{0pt plus 5cm}size\-\_\-t mystrlen (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{s}
+\end{DoxyParamCaption}
+)}\label{mystring_8h_aa231246d7f6f97231aa18689cc2ea20a}
+
+
+Finds the length of the null terminated string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & The string to determine length. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The length of the string. 
+\end{DoxyReturn}
+
+
+Referenced by mystrdup().
+

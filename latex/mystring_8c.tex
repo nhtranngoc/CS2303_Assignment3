@@ -1,0 +1,151 @@
+\section{mystring.\-c File Reference}
+\label{mystring_8c}\index{mystring.\-c@{mystring.\-c}}
+{\ttfamily \#include $<$string.\-h$>$}\\*
+{\ttfamily \#include $<$stdlib.\-h$>$}\\*
+{\ttfamily \#include \char`\"{}mystring.\-h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ {\bf mystrdup} (const char $\ast$src)
+\item 
+size\-\_\-t {\bf mystrlen} (const char $\ast$s)
+\begin{DoxyCompactList}\small\item\em Finds the length of the null terminated string. \end{DoxyCompactList}\item 
+char $\ast$ {\bf mystrcpy} (char $\ast$dest, const char $\ast$src)
+\begin{DoxyCompactList}\small\item\em Copy the string to a destination string. \end{DoxyCompactList}\item 
+char $\ast$ {\bf mystrcat} (char $\ast$dest, const char $\ast$src)
+\begin{DoxyCompactList}\small\item\em Appends the src string to the dest string, overwriting terminating null byte at the end of dest, and adds a terminating null byte. \end{DoxyCompactList}\item 
+char $\ast$ {\bf mystrncat} (char $\ast$dest, const char $\ast$src, size\-\_\-t n)
+\begin{DoxyCompactList}\small\item\em ppends the src string to the dest string, overwriting terminating null byte at the end of dest, and adds a terminating null byte-\/ however, this function uses at most n bytes from src. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{mystring.\-c@{mystring.\-c}!mystrcat@{mystrcat}}
+\index{mystrcat@{mystrcat}!mystring.c@{mystring.\-c}}
+\subsubsection[{mystrcat}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ mystrcat (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{dest, }
+\item[{const char $\ast$}]{src}
+\end{DoxyParamCaption}
+)}\label{mystring_8c_aebc286ca79fc1f0b7ca5d05066cd79a7}
+
+
+Appends the src string to the dest string, overwriting terminating null byte at the end of dest, and adds a terminating null byte. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dest} & String to be appended. \\
+\hline
+{\em src} & String to append to.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A concatenated string from src and dest. 
+\end{DoxyReturn}
+
+
+Referenced by main().
+
+\index{mystring.\-c@{mystring.\-c}!mystrcpy@{mystrcpy}}
+\index{mystrcpy@{mystrcpy}!mystring.c@{mystring.\-c}}
+\subsubsection[{mystrcpy}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ mystrcpy (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{dest, }
+\item[{const char $\ast$}]{src}
+\end{DoxyParamCaption}
+)}\label{mystring_8c_a515b2c58f31e99a4564e463ffbf73e2f}
+
+
+Copy the string to a destination string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $\ast$dest} & pointer to destination string. \\
+\hline
+{\em $\ast$src} & pointer to source string. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The destination string. 
+\end{DoxyReturn}
+
+
+Referenced by mystrdup().
+
+\index{mystring.\-c@{mystring.\-c}!mystrdup@{mystrdup}}
+\index{mystrdup@{mystrdup}!mystring.c@{mystring.\-c}}
+\subsubsection[{mystrdup}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ mystrdup (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{src}
+\end{DoxyParamCaption}
+)}\label{mystring_8c_a148a52c665d88f52fb4995338a319d3c}
+\doxyref{mystring.\-c}{p.}{mystring_8c} \begin{DoxyAuthor}{Author}
+Mike Ciaraldi My own versions of some of the C-\/style string functions Duplicates a C-\/style string. 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em src} & Pointer to string to be copied \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to freshly-\/allocated string containing a duplicate of src or null if no memory is available 
+\end{DoxyReturn}
+
+
+References mystrcpy(), and mystrlen().
+
+
+
+Referenced by main().
+
+\index{mystring.\-c@{mystring.\-c}!mystrlen@{mystrlen}}
+\index{mystrlen@{mystrlen}!mystring.c@{mystring.\-c}}
+\subsubsection[{mystrlen}]{\setlength{\rightskip}{0pt plus 5cm}size\-\_\-t mystrlen (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{s}
+\end{DoxyParamCaption}
+)}\label{mystring_8c_aa231246d7f6f97231aa18689cc2ea20a}
+
+
+Finds the length of the null terminated string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & The string to determine length. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The length of the string. 
+\end{DoxyReturn}
+
+
+Referenced by mystrdup().
+
+\index{mystring.\-c@{mystring.\-c}!mystrncat@{mystrncat}}
+\index{mystrncat@{mystrncat}!mystring.c@{mystring.\-c}}
+\subsubsection[{mystrncat}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ mystrncat (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{dest, }
+\item[{const char $\ast$}]{src, }
+\item[{size\-\_\-t}]{n}
+\end{DoxyParamCaption}
+)}\label{mystring_8c_a36e5091b981e9da826d41e7977b8e507}
+
+
+ppends the src string to the dest string, overwriting terminating null byte at the end of dest, and adds a terminating null byte-\/ however, this function uses at most n bytes from src. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dest} & String to be appended. \\
+\hline
+{\em src} & String to append to. \\
+\hline
+{\em n} & Max number of bytes to append. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A concatenated string from src and dest, at a limit of n. 
+\end{DoxyReturn}
+
+
+Referenced by main().
+
