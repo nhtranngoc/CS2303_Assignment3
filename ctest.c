@@ -16,11 +16,14 @@ int main()
   char a1[MAX_CHARS + 1]; // Character array--initially empty
   char a2[] = "Hello"; // Character array--unsized but initialized
   char a3[MAX_CHARS + 1]; // Character array--we will underfill it
+  char a4[MAX_CHARS + 1]; // Character array--we will underfill it
+  char a5[MAX_CHARS + 1]; // Character array--we will underfill it
+
   char* p1 = "Hello"; // Pointer to constant string
   char* p2;           // Will be a pointer to dynamically-allocated string
   int copy_limit;     // Maximum characters to copy.
 
-  strcpy(a3, "Hello, also"); // Initialize uinderfilled character array
+  mystrcpy(a3, "Hello, also"); // Initialize uinderfilled character array
 
   /* Print the pointers.
      Note: this example prints
@@ -44,13 +47,13 @@ int main()
   printf("a1 = %s\n", a1);
 
   // Concatenate two character arrays safely, then print.
-  copy_limit = MAX_CHARS - strlen(a1); // How much space is left?
+  copy_limit = MAX_CHARS - mystrlen(a1); // How much space is left?
   printf("Concatenating a2 to the end of a1, with copy_limit = %d\n",copy_limit);
   if (copy_limit > 0) mystrncat(a1, a2, copy_limit);
   printf("a1 = %s\n", a1);
 
   // Concatenate two character arrays safely, then print.
-  copy_limit = MAX_CHARS - strlen(a1); // How much space is left?
+  copy_limit = MAX_CHARS - mystrlen(a1); // How much space is left?
   printf("Concatenating a3 to the end of a1, with copy_limit = %d\n",copy_limit);
   if (copy_limit > 0) mystrncat(a1, a3, copy_limit);
   printf("a1 = %s\n", a1);
@@ -60,6 +63,18 @@ int main()
   p2 = mystrdup(a2);
   printf("Duplicated string: \n");
   printf("Pointer p2 = %p, contents = %s\n", p2, p2);
+
+  //mystrncpy and mystrndup test
+  char a6[] = "The brown fox jumps over the lazy dog";
+  char a7[] = "The brown fox";
+  mystrncpy(a4, a6, MAX_CHARS);
+  printf("a4 too long= %s\n", a4);
+  
+  mystrncpy(a4, a7, MAX_CHARS);
+  printf("a4 = %s\n", a4);
+
+  char* p3 = mystrndup(a4, 6);
+  printf("p3 with a word limit of 5 = %s\n", p3);
 
   return 0;
 }

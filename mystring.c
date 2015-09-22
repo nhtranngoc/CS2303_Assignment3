@@ -29,6 +29,24 @@ char* mystrdup(const char* src) {
 }
 
 /**
+ * @brief Returns a pointer to a duplicated string of string s, with a limit of n bytes
+ * @param s Pointer to string to be copied 
+ * @param n Max number of bytes to duplicate
+ * @return Pointer to freshly-allocated string containing a duplicate of src
+ * or null if no memory is available
+ */
+char* mystrndup(const char *s, size_t n){
+  char* newstr;
+  newstr = (char*) malloc(n+1);
+
+  if (newstr == 0) return (char*)0;
+
+  mystrncpy(newstr, s, n);
+  if (newstr[(int)n] != '\0') newstr[(int)n] = '\0';
+  return newstr;
+}
+
+/**
  * @brief Finds the length of the null terminated string.
  * @param s The string to determine length.
  * @return The length of the string.
@@ -58,6 +76,26 @@ char* mystrcpy(char *dest, const char *src){
     }
     *dest = *nextChar;
   return dest;
+}
+
+/**
+ * @brief Copies the string pointed to by src, including the terminating null byte to the buffer
+ * pointed to by dest, at most n bytes. 
+ * @param dest String to copy to
+ * @param src String to be copied
+ * @param n Max number of bytes to cpy
+ * @return A pointer to the destination string dest
+ */
+char* mystrncpy(char* dest, const char* src, size_t n){
+  char* nextChar= dest;
+
+  size_t i;
+  for (i = 0; i< n; i++){
+    *dest = *src;
+    if (*src != '\0') ++src;
+    ++dest;
+  }
+  return nextChar;
 }
 
 /**
