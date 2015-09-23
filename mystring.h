@@ -4,6 +4,9 @@
 */
 
 // Function prototype(s):
+ #include <stdio.h>
+#include <string.h>
+ 
 char* mystrdup(const char* src);
 char* mystrndup(const char *s, size_t n);
 size_t mystrlen(const char* s);

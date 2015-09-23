@@ -2,6 +2,7 @@
 #include <string.h>
 // string.h covers the C-style string functions.
 #include "mystring.h"
+#include "struct.h"
 
 /** ctest.c
  * Program to demonstrate character arrays and
@@ -75,6 +76,33 @@ int main()
 
   char* p3 = mystrndup(a4, 6);
   printf("p3 with a word limit of 5 = %s\n", p3);
+
+  //Test struct functions
+  alien* alien1 = generate_alien("Kif", 7, 9);
+  alien* alien2 = generate_alien("Kal-El", 9, 2);
+  alien* alien3 = generate_random_alien();
+  alien* alien4 = generate_random_alien();
+
+  print_alien(alien1);
+  print_alien(alien2);
+  print_alien(alien3);
+  print_alien(alien4);
+
+  printf("--------------PRINTING ARRAY OF ALIENS--------------\n");
+  printf("--------------PUT ON YOUR TINFOIL HAT--------------\n");
+
+  alien** alien5 = generate_alien_count(5);
+  alien** alien6 = alien_shallow_copy(alien5, 5);
+  alien** alien7 = alien_deep_copy(alien5, 5);
+
+  printf("Alien 5: \n");
+  print_alien_count(alien5, 5);
+  printf("Shallow copy of Alien 5: \n");
+  print_alien_count(alien6, 5);
+  printf("Deep copy of Alien 5: \n");
+  print_alien_count(alien7, 5);
+
+  alien_free(alien5, 5);
 
   return 0;
 }

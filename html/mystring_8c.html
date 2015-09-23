@@ -30,6 +30,7 @@
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
     </ul>
   </div>
@@ -55,17 +56,23 @@
 Functions</h2></td></tr>
 <tr class="memitem:a148a52c665d88f52fb4995338a319d3c"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mystring_8c.html#a148a52c665d88f52fb4995338a319d3c">mystrdup</a> (const char *src)</td></tr>
 <tr class="separator:a148a52c665d88f52fb4995338a319d3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9dc11eca5ee6b0e312610650bbe36e6d"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mystring_8c.html#a9dc11eca5ee6b0e312610650bbe36e6d">mystrndup</a> (const char *s, size_t n)</td></tr>
+<tr class="memdesc:a9dc11eca5ee6b0e312610650bbe36e6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deep copy the src string in a new block, leaves the original intact.  <a href="#a9dc11eca5ee6b0e312610650bbe36e6d">More...</a><br/></td></tr>
+<tr class="separator:a9dc11eca5ee6b0e312610650bbe36e6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa231246d7f6f97231aa18689cc2ea20a"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mystring_8c.html#aa231246d7f6f97231aa18689cc2ea20a">mystrlen</a> (const char *s)</td></tr>
 <tr class="memdesc:aa231246d7f6f97231aa18689cc2ea20a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finds the length of the null terminated string.  <a href="#aa231246d7f6f97231aa18689cc2ea20a">More...</a><br/></td></tr>
 <tr class="separator:aa231246d7f6f97231aa18689cc2ea20a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a515b2c58f31e99a4564e463ffbf73e2f"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mystring_8c.html#a515b2c58f31e99a4564e463ffbf73e2f">mystrcpy</a> (char *dest, const char *src)</td></tr>
 <tr class="memdesc:a515b2c58f31e99a4564e463ffbf73e2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy the string to a destination string.  <a href="#a515b2c58f31e99a4564e463ffbf73e2f">More...</a><br/></td></tr>
 <tr class="separator:a515b2c58f31e99a4564e463ffbf73e2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86b7a78bb3914b2c6e6022b482c4a534"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mystring_8c.html#a86b7a78bb3914b2c6e6022b482c4a534">mystrncpy</a> (char *dest, const char *src, size_t n)</td></tr>
+<tr class="memdesc:a86b7a78bb3914b2c6e6022b482c4a534"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copies the string pointed to by src, including the terminating null byte to the buffer pointed to by dest, at most n bytes.  <a href="#a86b7a78bb3914b2c6e6022b482c4a534">More...</a><br/></td></tr>
+<tr class="separator:a86b7a78bb3914b2c6e6022b482c4a534"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aebc286ca79fc1f0b7ca5d05066cd79a7"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mystring_8c.html#aebc286ca79fc1f0b7ca5d05066cd79a7">mystrcat</a> (char *dest, const char *src)</td></tr>
 <tr class="memdesc:aebc286ca79fc1f0b7ca5d05066cd79a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Appends the src string to the dest string, overwriting terminating null byte at the end of dest, and adds a terminating null byte.  <a href="#aebc286ca79fc1f0b7ca5d05066cd79a7">More...</a><br/></td></tr>
 <tr class="separator:aebc286ca79fc1f0b7ca5d05066cd79a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a36e5091b981e9da826d41e7977b8e507"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mystring_8c.html#a36e5091b981e9da826d41e7977b8e507">mystrncat</a> (char *dest, const char *src, size_t n)</td></tr>
-<tr class="memdesc:a36e5091b981e9da826d41e7977b8e507"><td class="mdescLeft">&#160;</td><td class="mdescRight">ppends the src string to the dest string, overwriting terminating null byte at the end of dest, and adds a terminating null byte- however, this function uses at most n bytes from src.  <a href="#a36e5091b981e9da826d41e7977b8e507">More...</a><br/></td></tr>
+<tr class="memdesc:a36e5091b981e9da826d41e7977b8e507"><td class="mdescLeft">&#160;</td><td class="mdescRight">Appends the src string to the dest string, overwriting terminating null byte at the end of dest, and adds a terminating null byte- however, this function uses at most n bytes from src.  <a href="#a36e5091b981e9da826d41e7977b8e507">More...</a><br/></td></tr>
 <tr class="separator:a36e5091b981e9da826d41e7977b8e507"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
@@ -141,7 +148,7 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The destination string. </dd></dl>
 
-<p>Referenced by <a class="el" href="mystring_8h.html#a148a52c665d88f52fb4995338a319d3c">mystrdup()</a>.</p>
+<p>Referenced by <a class="el" href="ctest_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main()</a>, and <a class="el" href="mystring_8h.html#a148a52c665d88f52fb4995338a319d3c">mystrdup()</a>.</p>
 
 </div>
 </div>
@@ -197,7 +204,7 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The length of the string. </dd></dl>
 
-<p>Referenced by <a class="el" href="mystring_8h.html#a148a52c665d88f52fb4995338a319d3c">mystrdup()</a>.</p>
+<p>Referenced by <a class="el" href="struct_8h.html#aed439d27d4e904f0b6fe86638dcb1589">generate_alien()</a>, <a class="el" href="struct_8h.html#adce2ee9ad53436d50ad36034cacaf4b1">generate_random_alien()</a>, <a class="el" href="ctest_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main()</a>, and <a class="el" href="mystring_8h.html#a148a52c665d88f52fb4995338a319d3c">mystrdup()</a>.</p>
 
 </div>
 </div>
@@ -231,7 +238,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>ppends the src string to the dest string, overwriting terminating null byte at the end of dest, and adds a terminating null byte- however, this function uses at most n bytes from src. </p>
+<p>Appends the src string to the dest string, overwriting terminating null byte at the end of dest, and adds a terminating null byte- however, this function uses at most n bytes from src. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">dest</td><td>String to be appended. </td></tr>
@@ -246,10 +253,94 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a86b7a78bb3914b2c6e6022b482c4a534"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* mystrncpy </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>dest</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>n</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Copies the string pointed to by src, including the terminating null byte to the buffer pointed to by dest, at most n bytes. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dest</td><td>String to copy to </td></tr>
+    <tr><td class="paramname">src</td><td>String to be copied </td></tr>
+    <tr><td class="paramname">n</td><td>Max number of bytes to cpy </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A pointer to the destination string dest </dd></dl>
+
+<p>Referenced by <a class="el" href="ctest_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main()</a>, and <a class="el" href="mystring_8h.html#a9dc11eca5ee6b0e312610650bbe36e6d">mystrndup()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9dc11eca5ee6b0e312610650bbe36e6d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* mystrndup </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>s</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>n</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Deep copy the src string in a new block, leaves the original intact. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">n</td><td>Max number of bytes to duplicate </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Pointer to deep copied string containing a duplicate of src </dd></dl>
+
+<p>References <a class="el" href="mystring_8c.html#a86b7a78bb3914b2c6e6022b482c4a534">mystrncpy()</a>.</p>
+
+<p>Referenced by <a class="el" href="struct_8h.html#aed439d27d4e904f0b6fe86638dcb1589">generate_alien()</a>, <a class="el" href="struct_8h.html#adce2ee9ad53436d50ad36034cacaf4b1">generate_random_alien()</a>, and <a class="el" href="ctest_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main()</a>.</p>
+
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Sep 21 2015 22:57:23 for lab3 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Sep 22 2015 22:31:57 for lab3 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

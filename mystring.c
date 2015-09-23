@@ -29,11 +29,9 @@ char* mystrdup(const char* src) {
 }
 
 /**
- * @brief Returns a pointer to a duplicated string of string s, with a limit of n bytes
- * @param s Pointer to string to be copied 
+ * @brief Deep copy the src string in a new block, leaves the original intact.
  * @param n Max number of bytes to duplicate
- * @return Pointer to freshly-allocated string containing a duplicate of src
- * or null if no memory is available
+ * @return Pointer to deep copied string containing a duplicate of src
  */
 char* mystrndup(const char *s, size_t n){
   char* newstr;
@@ -121,7 +119,7 @@ char* mystrcat(char *dest, const char *src){
 }
 
 /**
- * @brief ppends the src string to the dest string, overwriting terminating null 
+ * @brief Appends the src string to the dest string, overwriting terminating null 
  * byte at the end of dest, and adds a terminating null byte- however, this function uses at
  * most n bytes from src.
  * @param dest String to be appended.

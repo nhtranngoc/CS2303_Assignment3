@@ -8,14 +8,18 @@
 \item 
 char $\ast$ {\bf mystrdup} (const char $\ast$src)
 \item 
+char $\ast$ {\bf mystrndup} (const char $\ast$s, size\-\_\-t n)
+\begin{DoxyCompactList}\small\item\em Deep copy the src string in a new block, leaves the original intact. \end{DoxyCompactList}\item 
 size\-\_\-t {\bf mystrlen} (const char $\ast$s)
 \begin{DoxyCompactList}\small\item\em Finds the length of the null terminated string. \end{DoxyCompactList}\item 
 char $\ast$ {\bf mystrcpy} (char $\ast$dest, const char $\ast$src)
 \begin{DoxyCompactList}\small\item\em Copy the string to a destination string. \end{DoxyCompactList}\item 
+char $\ast$ {\bf mystrncpy} (char $\ast$dest, const char $\ast$src, size\-\_\-t n)
+\begin{DoxyCompactList}\small\item\em Copies the string pointed to by src, including the terminating null byte to the buffer pointed to by dest, at most n bytes. \end{DoxyCompactList}\item 
 char $\ast$ {\bf mystrcat} (char $\ast$dest, const char $\ast$src)
 \begin{DoxyCompactList}\small\item\em Appends the src string to the dest string, overwriting terminating null byte at the end of dest, and adds a terminating null byte. \end{DoxyCompactList}\item 
 char $\ast$ {\bf mystrncat} (char $\ast$dest, const char $\ast$src, size\-\_\-t n)
-\begin{DoxyCompactList}\small\item\em ppends the src string to the dest string, overwriting terminating null byte at the end of dest, and adds a terminating null byte-\/ however, this function uses at most n bytes from src. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Appends the src string to the dest string, overwriting terminating null byte at the end of dest, and adds a terminating null byte-\/ however, this function uses at most n bytes from src. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Function Documentation}
@@ -69,7 +73,7 @@ The destination string.
 \end{DoxyReturn}
 
 
-Referenced by mystrdup().
+Referenced by main(), and mystrdup().
 
 \index{mystring.\-c@{mystring.\-c}!mystrdup@{mystrdup}}
 \index{mystrdup@{mystrdup}!mystring.c@{mystring.\-c}}
@@ -118,7 +122,7 @@ The length of the string.
 \end{DoxyReturn}
 
 
-Referenced by mystrdup().
+Referenced by generate\-\_\-alien(), generate\-\_\-random\-\_\-alien(), main(), and mystrdup().
 
 \index{mystring.\-c@{mystring.\-c}!mystrncat@{mystrncat}}
 \index{mystrncat@{mystrncat}!mystring.c@{mystring.\-c}}
@@ -131,7 +135,7 @@ Referenced by mystrdup().
 )}\label{mystring_8c_a36e5091b981e9da826d41e7977b8e507}
 
 
-ppends the src string to the dest string, overwriting terminating null byte at the end of dest, and adds a terminating null byte-\/ however, this function uses at most n bytes from src. 
+Appends the src string to the dest string, overwriting terminating null byte at the end of dest, and adds a terminating null byte-\/ however, this function uses at most n bytes from src. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -148,4 +152,61 @@ A concatenated string from src and dest, at a limit of n.
 
 
 Referenced by main().
+
+\index{mystring.\-c@{mystring.\-c}!mystrncpy@{mystrncpy}}
+\index{mystrncpy@{mystrncpy}!mystring.c@{mystring.\-c}}
+\subsubsection[{mystrncpy}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ mystrncpy (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{dest, }
+\item[{const char $\ast$}]{src, }
+\item[{size\-\_\-t}]{n}
+\end{DoxyParamCaption}
+)}\label{mystring_8c_a86b7a78bb3914b2c6e6022b482c4a534}
+
+
+Copies the string pointed to by src, including the terminating null byte to the buffer pointed to by dest, at most n bytes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dest} & String to copy to \\
+\hline
+{\em src} & String to be copied \\
+\hline
+{\em n} & Max number of bytes to cpy \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the destination string dest 
+\end{DoxyReturn}
+
+
+Referenced by main(), and mystrndup().
+
+\index{mystring.\-c@{mystring.\-c}!mystrndup@{mystrndup}}
+\index{mystrndup@{mystrndup}!mystring.c@{mystring.\-c}}
+\subsubsection[{mystrndup}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ mystrndup (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{s, }
+\item[{size\-\_\-t}]{n}
+\end{DoxyParamCaption}
+)}\label{mystring_8c_a9dc11eca5ee6b0e312610650bbe36e6d}
+
+
+Deep copy the src string in a new block, leaves the original intact. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & Max number of bytes to duplicate \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to deep copied string containing a duplicate of src 
+\end{DoxyReturn}
+
+
+References mystrncpy().
+
+
+
+Referenced by generate\-\_\-alien(), generate\-\_\-random\-\_\-alien(), and main().
 
