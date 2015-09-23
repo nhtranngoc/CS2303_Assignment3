@@ -1,214 +1,120 @@
-\section{mystring.\-h File Reference}
-\label{mystring_8h}\index{mystring.\-h@{mystring.\-h}}
-{\ttfamily \#include $<$stdio.\-h$>$}\\*
-{\ttfamily \#include $<$string.\-h$>$}\\*
+\section{mystring.h File Reference}
+\label{mystring_8h}\index{mystring.h@{mystring.h}}
+{\tt \#include $<$stdio.h$>$}\par
+{\tt \#include $<$string.h$>$}\par
 \subsection*{Functions}
-\begin{DoxyCompactItemize}
+\begin{CompactItemize}
 \item 
-char $\ast$ {\bf mystrdup} (const char $\ast$src)
+char $\ast$ \bf{mystrdup} (const char $\ast$src)
 \item 
-char $\ast$ {\bf mystrndup} (const char $\ast$s, size\-\_\-t n)
-\begin{DoxyCompactList}\small\item\em Deep copy the src string in a new block, leaves the original intact. \end{DoxyCompactList}\item 
-size\-\_\-t {\bf mystrlen} (const char $\ast$s)
-\begin{DoxyCompactList}\small\item\em Finds the length of the null terminated string. \end{DoxyCompactList}\item 
-char $\ast$ {\bf mystrcpy} (char $\ast$dest, const char $\ast$src)
-\begin{DoxyCompactList}\small\item\em Copy the string to a destination string. \end{DoxyCompactList}\item 
-char $\ast$ {\bf mystrncpy} (char $\ast$dest, const char $\ast$src, size\-\_\-t n)
-\begin{DoxyCompactList}\small\item\em Copies the string pointed to by src, including the terminating null byte to the buffer pointed to by dest, at most n bytes. \end{DoxyCompactList}\item 
-char $\ast$ {\bf mystrcat} (char $\ast$dest, const char $\ast$src)
-\begin{DoxyCompactList}\small\item\em Appends the src string to the dest string, overwriting terminating null byte at the end of dest, and adds a terminating null byte. \end{DoxyCompactList}\item 
-char $\ast$ {\bf mystrncat} (char $\ast$dest, const char $\ast$src, size\-\_\-t n)
-\begin{DoxyCompactList}\small\item\em Appends the src string to the dest string, overwriting terminating null byte at the end of dest, and adds a terminating null byte-\/ however, this function uses at most n bytes from src. \end{DoxyCompactList}\end{DoxyCompactItemize}
+char $\ast$ \bf{mystrndup} (const char $\ast$s, size\_\-t n)
+\begin{CompactList}\small\item\em Deep copy the src string in a new block, leaves the original intact. \item\end{CompactList}\item 
+size\_\-t \bf{mystrlen} (const char $\ast$s)
+\begin{CompactList}\small\item\em Finds the length of the null terminated string. \item\end{CompactList}\item 
+char $\ast$ \bf{mystrcpy} (char $\ast$dest, const char $\ast$src)
+\begin{CompactList}\small\item\em Copy the string to a destination string. \item\end{CompactList}\item 
+char $\ast$ \bf{mystrncpy} (char $\ast$dest, const char $\ast$src, size\_\-t n)
+\begin{CompactList}\small\item\em Copies the string pointed to by src, including the terminating null byte to the buffer pointed to by dest, at most n bytes. \item\end{CompactList}\item 
+char $\ast$ \bf{mystrcat} (char $\ast$dest, const char $\ast$src)
+\begin{CompactList}\small\item\em Appends the src string to the dest string, overwriting terminating null byte at the end of dest, and adds a terminating null byte. \item\end{CompactList}\item 
+char $\ast$ \bf{mystrncat} (char $\ast$dest, const char $\ast$src, size\_\-t n)
+\begin{CompactList}\small\item\em Appends the src string to the dest string, overwriting terminating null byte at the end of dest, and adds a terminating null byte- however, this function uses at most n bytes from src. \item\end{CompactList}\end{CompactItemize}
 
 
 \subsection{Function Documentation}
-\index{mystring.\-h@{mystring.\-h}!mystrcat@{mystrcat}}
-\index{mystrcat@{mystrcat}!mystring.h@{mystring.\-h}}
-\subsubsection[{mystrcat}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ mystrcat (
-\begin{DoxyParamCaption}
-\item[{char $\ast$}]{dest, }
-\item[{const char $\ast$}]{src}
-\end{DoxyParamCaption}
-)}\label{mystring_8h_aebc286ca79fc1f0b7ca5d05066cd79a7}
+\index{mystring.h@{mystring.h}!mystrcat@{mystrcat}}
+\index{mystrcat@{mystrcat}!mystring.h@{mystring.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ mystrcat (char $\ast$ {\em dest}, const char $\ast$ {\em src})}\label{mystring_8h_ebc286ca79fc1f0b7ca5d05066cd79a7}
 
 
 Appends the src string to the dest string, overwriting terminating null byte at the end of dest, and adds a terminating null byte. 
 
-
-\begin{DoxyParams}{Parameters}
-{\em dest} & String to be appended. \\
-\hline
-{\em src} & String to append to.\\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-A concatenated string from src and dest. 
-\end{DoxyReturn}
-
-
-Referenced by main().
-
-\index{mystring.\-h@{mystring.\-h}!mystrcpy@{mystrcpy}}
-\index{mystrcpy@{mystrcpy}!mystring.h@{mystring.\-h}}
-\subsubsection[{mystrcpy}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ mystrcpy (
-\begin{DoxyParamCaption}
-\item[{char $\ast$}]{dest, }
-\item[{const char $\ast$}]{src}
-\end{DoxyParamCaption}
-)}\label{mystring_8h_a515b2c58f31e99a4564e463ffbf73e2f}
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em dest}]String to be appended. \item[{\em src}]String to append to.\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]A concatenated string from src and dest. \end{Desc}
+\index{mystring.h@{mystring.h}!mystrcpy@{mystrcpy}}
+\index{mystrcpy@{mystrcpy}!mystring.h@{mystring.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ mystrcpy (char $\ast$ {\em dest}, const char $\ast$ {\em src})}\label{mystring_8h_515b2c58f31e99a4564e463ffbf73e2f}
 
 
 Copy the string to a destination string. 
 
-
-\begin{DoxyParams}{Parameters}
-{\em $\ast$dest} & pointer to destination string. \\
-\hline
-{\em $\ast$src} & pointer to source string. \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-The destination string. 
-\end{DoxyReturn}
-
-
-Referenced by main(), and mystrdup().
-
-\index{mystring.\-h@{mystring.\-h}!mystrdup@{mystrdup}}
-\index{mystrdup@{mystrdup}!mystring.h@{mystring.\-h}}
-\subsubsection[{mystrdup}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ mystrdup (
-\begin{DoxyParamCaption}
-\item[{const char $\ast$}]{src}
-\end{DoxyParamCaption}
-)}\label{mystring_8h_a148a52c665d88f52fb4995338a319d3c}
-\doxyref{mystring.\-h}{p.}{mystring_8h} \begin{DoxyAuthor}{Author}
-Mike Ciaraldi My own versions of some of the C-\/style string functions
-\end{DoxyAuthor}
-\doxyref{mystring.\-c}{p.}{mystring_8c} \begin{DoxyAuthor}{Author}
-Mike Ciaraldi My own versions of some of the C-\/style string functions Duplicates a C-\/style string. 
-\end{DoxyAuthor}
-
-\begin{DoxyParams}{Parameters}
-{\em src} & Pointer to string to be copied \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-Pointer to freshly-\/allocated string containing a duplicate of src or null if no memory is available 
-\end{DoxyReturn}
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em $\ast$dest}]pointer to destination string. \item[{\em $\ast$src}]pointer to source string. \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]The destination string. \end{Desc}
+\index{mystring.h@{mystring.h}!mystrdup@{mystrdup}}
+\index{mystrdup@{mystrdup}!mystring.h@{mystring.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ mystrdup (const char $\ast$ {\em src})}\label{mystring_8h_148a52c665d88f52fb4995338a319d3c}
 
 
-References mystrcpy(), and mystrlen().
-
-
-
-Referenced by main().
-
-\index{mystring.\-h@{mystring.\-h}!mystrlen@{mystrlen}}
-\index{mystrlen@{mystrlen}!mystring.h@{mystring.\-h}}
-\subsubsection[{mystrlen}]{\setlength{\rightskip}{0pt plus 5cm}size\-\_\-t mystrlen (
-\begin{DoxyParamCaption}
-\item[{const char $\ast$}]{s}
-\end{DoxyParamCaption}
-)}\label{mystring_8h_aa231246d7f6f97231aa18689cc2ea20a}
+Duplicates a C-style string. \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em src}]Pointer to string to be copied \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]Pointer to freshly-allocated string containing a duplicate of src or null if no memory is available \end{Desc}
+\index{mystring.h@{mystring.h}!mystrlen@{mystrlen}}
+\index{mystrlen@{mystrlen}!mystring.h@{mystring.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}size\_\-t mystrlen (const char $\ast$ {\em s})}\label{mystring_8h_a231246d7f6f97231aa18689cc2ea20a}
 
 
 Finds the length of the null terminated string. 
 
-
-\begin{DoxyParams}{Parameters}
-{\em s} & The string to determine length. \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-The length of the string. 
-\end{DoxyReturn}
-
-
-Referenced by generate\-\_\-alien(), generate\-\_\-random\-\_\-alien(), main(), and mystrdup().
-
-\index{mystring.\-h@{mystring.\-h}!mystrncat@{mystrncat}}
-\index{mystrncat@{mystrncat}!mystring.h@{mystring.\-h}}
-\subsubsection[{mystrncat}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ mystrncat (
-\begin{DoxyParamCaption}
-\item[{char $\ast$}]{dest, }
-\item[{const char $\ast$}]{src, }
-\item[{size\-\_\-t}]{n}
-\end{DoxyParamCaption}
-)}\label{mystring_8h_a36e5091b981e9da826d41e7977b8e507}
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em s}]The string to determine length. \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]The length of the string. \end{Desc}
+\index{mystring.h@{mystring.h}!mystrncat@{mystrncat}}
+\index{mystrncat@{mystrncat}!mystring.h@{mystring.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ mystrncat (char $\ast$ {\em dest}, const char $\ast$ {\em src}, size\_\-t {\em n})}\label{mystring_8h_36e5091b981e9da826d41e7977b8e507}
 
 
-Appends the src string to the dest string, overwriting terminating null byte at the end of dest, and adds a terminating null byte-\/ however, this function uses at most n bytes from src. 
+Appends the src string to the dest string, overwriting terminating null byte at the end of dest, and adds a terminating null byte- however, this function uses at most n bytes from src. 
 
-
-\begin{DoxyParams}{Parameters}
-{\em dest} & String to be appended. \\
-\hline
-{\em src} & String to append to. \\
-\hline
-{\em n} & Max number of bytes to append. \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-A concatenated string from src and dest, at a limit of n. 
-\end{DoxyReturn}
-
-
-Referenced by main().
-
-\index{mystring.\-h@{mystring.\-h}!mystrncpy@{mystrncpy}}
-\index{mystrncpy@{mystrncpy}!mystring.h@{mystring.\-h}}
-\subsubsection[{mystrncpy}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ mystrncpy (
-\begin{DoxyParamCaption}
-\item[{char $\ast$}]{dest, }
-\item[{const char $\ast$}]{src, }
-\item[{size\-\_\-t}]{n}
-\end{DoxyParamCaption}
-)}\label{mystring_8h_a86b7a78bb3914b2c6e6022b482c4a534}
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em dest}]String to be appended. \item[{\em src}]String to append to. \item[{\em n}]Max number of bytes to append. \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]A concatenated string from src and dest, at a limit of n. \end{Desc}
+\index{mystring.h@{mystring.h}!mystrncpy@{mystrncpy}}
+\index{mystrncpy@{mystrncpy}!mystring.h@{mystring.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ mystrncpy (char $\ast$ {\em dest}, const char $\ast$ {\em src}, size\_\-t {\em n})}\label{mystring_8h_86b7a78bb3914b2c6e6022b482c4a534}
 
 
 Copies the string pointed to by src, including the terminating null byte to the buffer pointed to by dest, at most n bytes. 
 
-
-\begin{DoxyParams}{Parameters}
-{\em dest} & String to copy to \\
-\hline
-{\em src} & String to be copied \\
-\hline
-{\em n} & Max number of bytes to cpy \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-A pointer to the destination string dest 
-\end{DoxyReturn}
-
-
-Referenced by main(), and mystrndup().
-
-\index{mystring.\-h@{mystring.\-h}!mystrndup@{mystrndup}}
-\index{mystrndup@{mystrndup}!mystring.h@{mystring.\-h}}
-\subsubsection[{mystrndup}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ mystrndup (
-\begin{DoxyParamCaption}
-\item[{const char $\ast$}]{s, }
-\item[{size\-\_\-t}]{n}
-\end{DoxyParamCaption}
-)}\label{mystring_8h_a9dc11eca5ee6b0e312610650bbe36e6d}
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em dest}]String to copy to \item[{\em src}]String to be copied \item[{\em n}]Max number of bytes to cpy \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]A pointer to the destination string dest \end{Desc}
+\index{mystring.h@{mystring.h}!mystrndup@{mystrndup}}
+\index{mystrndup@{mystrndup}!mystring.h@{mystring.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ mystrndup (const char $\ast$ {\em s}, size\_\-t {\em n})}\label{mystring_8h_9dc11eca5ee6b0e312610650bbe36e6d}
 
 
 Deep copy the src string in a new block, leaves the original intact. 
 
-
-\begin{DoxyParams}{Parameters}
-{\em n} & Max number of bytes to duplicate \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-Pointer to deep copied string containing a duplicate of src 
-\end{DoxyReturn}
-
-
-References mystrncpy().
-
-
-
-Referenced by generate\-\_\-alien(), generate\-\_\-random\-\_\-alien(), and main().
-
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em n}]Max number of bytes to duplicate \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]Pointer to deep copied string containing a duplicate of src \end{Desc}

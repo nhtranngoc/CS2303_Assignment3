@@ -1,297 +1,165 @@
-\section{struct.\-h File Reference}
-\label{struct_8h}\index{struct.\-h@{struct.\-h}}
-{\ttfamily \#include \char`\"{}mystring.\-h\char`\"{}}\\*
-{\ttfamily \#include $<$string.\-h$>$}\\*
-{\ttfamily \#include $<$stdlib.\-h$>$}\\*
+\section{struct.h File Reference}
+\label{struct_8h}\index{struct.h@{struct.h}}
+{\tt \#include \char`\"{}mystring.h\char`\"{}}\par
+{\tt \#include $<$string.h$>$}\par
+{\tt \#include $<$stdlib.h$>$}\par
 \subsection*{Classes}
-\begin{DoxyCompactItemize}
+\begin{CompactItemize}
 \item 
-struct {\bf alien}
-\end{DoxyCompactItemize}
+struct \bf{alien}
+\end{CompactItemize}
 \subsection*{Functions}
-\begin{DoxyCompactItemize}
+\begin{CompactItemize}
 \item 
-{\bf alien} $\ast$ {\bf generate\-\_\-alien} (char $\ast$type, int height, int rank)
-\begin{DoxyCompactList}\small\item\em Generate an aliens from parameters. \end{DoxyCompactList}\item 
-void {\bf print\-\_\-alien} ({\bf alien} $\ast$a)
-\begin{DoxyCompactList}\small\item\em Print out an alien. \end{DoxyCompactList}\item 
-{\bf alien} $\ast$ {\bf generate\-\_\-random\-\_\-alien} ()
-\begin{DoxyCompactList}\small\item\em Generate a random alien with random type, height and rank. \end{DoxyCompactList}\item 
-char $\ast$ {\bf generate\-\_\-random\-\_\-string} (size\-\_\-t length)
-\begin{DoxyCompactList}\small\item\em Generate a random string of length. \end{DoxyCompactList}\item 
-int {\bf generate\-\_\-random\-\_\-int} (int min, int max)
-\begin{DoxyCompactList}\small\item\em Generate a random number in range. \end{DoxyCompactList}\item 
-{\bf alien} $\ast$$\ast$ {\bf generate\-\_\-alien\-\_\-count} (size\-\_\-t count)
-\begin{DoxyCompactList}\small\item\em Make an array of random aliens with a given size count. \end{DoxyCompactList}\item 
-void {\bf print\-\_\-alien\-\_\-count} ({\bf alien} $\ast$$\ast$arr, size\-\_\-t count)
-\begin{DoxyCompactList}\small\item\em Print an array of structs. \end{DoxyCompactList}\item 
-{\bf alien} $\ast$$\ast$ {\bf alien\-\_\-shallow\-\_\-copy} ({\bf alien} $\ast$$\ast$src, size\-\_\-t count)
-\begin{DoxyCompactList}\small\item\em Shallow copy an array of pointers to struct. \end{DoxyCompactList}\item 
-void {\bf alien\-\_\-free} ({\bf alien} $\ast$$\ast$a, size\-\_\-t count)
-\begin{DoxyCompactList}\small\item\em Free an array of pointers to alien. \end{DoxyCompactList}\item 
-{\bf alien} $\ast$$\ast$ {\bf alien\-\_\-deep\-\_\-copy} ({\bf alien} $\ast$$\ast$a, size\-\_\-t count)
-\begin{DoxyCompactList}\small\item\em Deep copy an array of pointers of struct. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\bf{alien} $\ast$ \bf{generate\_\-alien} (char $\ast$type, int height, int rank)
+\begin{CompactList}\small\item\em Generate an aliens from parameters. \item\end{CompactList}\item 
+void \bf{print\_\-alien} (\bf{alien} $\ast$a)
+\begin{CompactList}\small\item\em Print out an alien. \item\end{CompactList}\item 
+\bf{alien} $\ast$ \bf{generate\_\-random\_\-alien} ()
+\begin{CompactList}\small\item\em Generate a random alien with random type, height and rank. \item\end{CompactList}\item 
+char $\ast$ \bf{generate\_\-random\_\-string} (size\_\-t length)
+\begin{CompactList}\small\item\em Generate a random string of length. \item\end{CompactList}\item 
+int \bf{generate\_\-random\_\-int} (int min, int max)
+\begin{CompactList}\small\item\em Generate a random number in range. \item\end{CompactList}\item 
+\bf{alien} $\ast$$\ast$ \bf{generate\_\-alien\_\-count} (size\_\-t count)
+\begin{CompactList}\small\item\em Make an array of random aliens with a given size count. \item\end{CompactList}\item 
+void \bf{print\_\-alien\_\-count} (\bf{alien} $\ast$$\ast$arr, size\_\-t count)
+\begin{CompactList}\small\item\em Print an array of structs. \item\end{CompactList}\item 
+\bf{alien} $\ast$$\ast$ \bf{alien\_\-shallow\_\-copy} (\bf{alien} $\ast$$\ast$src, size\_\-t count)
+\begin{CompactList}\small\item\em Shallow copy an array of pointers to struct. \item\end{CompactList}\item 
+void \bf{alien\_\-free} (\bf{alien} $\ast$$\ast$a, size\_\-t count)
+\begin{CompactList}\small\item\em Free an array of pointers to alien. \item\end{CompactList}\item 
+\bf{alien} $\ast$$\ast$ \bf{alien\_\-deep\_\-copy} (\bf{alien} $\ast$$\ast$a, size\_\-t count)
+\begin{CompactList}\small\item\em Deep copy an array of pointers of struct. \item\end{CompactList}\end{CompactItemize}
 
 
 \subsection{Function Documentation}
-\index{struct.\-h@{struct.\-h}!alien\-\_\-deep\-\_\-copy@{alien\-\_\-deep\-\_\-copy}}
-\index{alien\-\_\-deep\-\_\-copy@{alien\-\_\-deep\-\_\-copy}!struct.h@{struct.\-h}}
-\subsubsection[{alien\-\_\-deep\-\_\-copy}]{\setlength{\rightskip}{0pt plus 5cm}{\bf alien}$\ast$$\ast$ alien\-\_\-deep\-\_\-copy (
-\begin{DoxyParamCaption}
-\item[{{\bf alien} $\ast$$\ast$}]{a, }
-\item[{size\-\_\-t}]{count}
-\end{DoxyParamCaption}
-)}\label{struct_8h_a00765b0af983a449ea6fe7a9ec5114fc}
+\index{struct.h@{struct.h}!alien_deep_copy@{alien\_\-deep\_\-copy}}
+\index{alien_deep_copy@{alien\_\-deep\_\-copy}!struct.h@{struct.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\bf{alien}$\ast$$\ast$ alien\_\-deep\_\-copy (\bf{alien} $\ast$$\ast$ {\em a}, size\_\-t {\em count})}\label{struct_8h_00765b0af983a449ea6fe7a9ec5114fc}
 
 
 Deep copy an array of pointers of struct. 
 
-
-\begin{DoxyParams}{Parameters}
-{\em a} & Source array to copy from \\
-\hline
-{\em count} & Length of the array \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-Deep copy of the array 
-\end{DoxyReturn}
-
-
-References generate\-\_\-alien().
-
-
-
-Referenced by main().
-
-\index{struct.\-h@{struct.\-h}!alien\-\_\-free@{alien\-\_\-free}}
-\index{alien\-\_\-free@{alien\-\_\-free}!struct.h@{struct.\-h}}
-\subsubsection[{alien\-\_\-free}]{\setlength{\rightskip}{0pt plus 5cm}void alien\-\_\-free (
-\begin{DoxyParamCaption}
-\item[{{\bf alien} $\ast$$\ast$}]{a, }
-\item[{size\-\_\-t}]{count}
-\end{DoxyParamCaption}
-)}\label{struct_8h_aaeff06edf6a2f1d6e3ccd814b2c2f846}
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em a}]Source array to copy from \item[{\em count}]Length of the array \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]Deep copy of the array \end{Desc}
+\index{struct.h@{struct.h}!alien_free@{alien\_\-free}}
+\index{alien_free@{alien\_\-free}!struct.h@{struct.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void alien\_\-free (\bf{alien} $\ast$$\ast$ {\em a}, size\_\-t {\em count})}\label{struct_8h_aeff06edf6a2f1d6e3ccd814b2c2f846}
 
 
 Free an array of pointers to alien. 
 
-
-\begin{DoxyParams}{Parameters}
-{\em a} & Array to free. \\
-\hline
-{\em count} & Length of the array. \\
-\hline
-\end{DoxyParams}
-
-
-Referenced by main().
-
-\index{struct.\-h@{struct.\-h}!alien\-\_\-shallow\-\_\-copy@{alien\-\_\-shallow\-\_\-copy}}
-\index{alien\-\_\-shallow\-\_\-copy@{alien\-\_\-shallow\-\_\-copy}!struct.h@{struct.\-h}}
-\subsubsection[{alien\-\_\-shallow\-\_\-copy}]{\setlength{\rightskip}{0pt plus 5cm}{\bf alien}$\ast$$\ast$ alien\-\_\-shallow\-\_\-copy (
-\begin{DoxyParamCaption}
-\item[{{\bf alien} $\ast$$\ast$}]{src, }
-\item[{size\-\_\-t}]{count}
-\end{DoxyParamCaption}
-)}\label{struct_8h_abd50f4a20ff4aba4bf09d382940ac130}
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em a}]Array to free. \item[{\em count}]Length of the array. \end{description}
+\end{Desc}
+\index{struct.h@{struct.h}!alien_shallow_copy@{alien\_\-shallow\_\-copy}}
+\index{alien_shallow_copy@{alien\_\-shallow\_\-copy}!struct.h@{struct.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\bf{alien}$\ast$$\ast$ alien\_\-shallow\_\-copy (\bf{alien} $\ast$$\ast$ {\em src}, size\_\-t {\em count})}\label{struct_8h_bd50f4a20ff4aba4bf09d382940ac130}
 
 
 Shallow copy an array of pointers to struct. 
 
-
-\begin{DoxyParams}{Parameters}
-{\em src} & Source array to copy from. \\
-\hline
-{\em count} & Length of the array. \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-Shallow copy of the array. 
-\end{DoxyReturn}
-
-
-Referenced by main().
-
-\index{struct.\-h@{struct.\-h}!generate\-\_\-alien@{generate\-\_\-alien}}
-\index{generate\-\_\-alien@{generate\-\_\-alien}!struct.h@{struct.\-h}}
-\subsubsection[{generate\-\_\-alien}]{\setlength{\rightskip}{0pt plus 5cm}{\bf alien}$\ast$ generate\-\_\-alien (
-\begin{DoxyParamCaption}
-\item[{char $\ast$}]{type, }
-\item[{int}]{height, }
-\item[{int}]{rank}
-\end{DoxyParamCaption}
-)}\label{struct_8h_aed439d27d4e904f0b6fe86638dcb1589}
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em src}]Source array to copy from. \item[{\em count}]Length of the array. \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]Shallow copy of the array. \end{Desc}
+\index{struct.h@{struct.h}!generate_alien@{generate\_\-alien}}
+\index{generate_alien@{generate\_\-alien}!struct.h@{struct.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\bf{alien}$\ast$ generate\_\-alien (char $\ast$ {\em type}, int {\em height}, int {\em rank})}\label{struct_8h_ed439d27d4e904f0b6fe86638dcb1589}
 
 
 Generate an aliens from parameters. 
 
-
-\begin{DoxyParams}{Parameters}
-{\em type} & Type of alien. \\
-\hline
-{\em height} & Height of alien. \\
-\hline
-{\em rank} & Rank of invading aliens. \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-Pointer to newly built alien. 
-\end{DoxyReturn}
-
-
-References alien\-::height, mystrlen(), mystrndup(), alien\-::rank, and alien\-::type.
-
-
-
-Referenced by alien\-\_\-deep\-\_\-copy(), and main().
-
-\index{struct.\-h@{struct.\-h}!generate\-\_\-alien\-\_\-count@{generate\-\_\-alien\-\_\-count}}
-\index{generate\-\_\-alien\-\_\-count@{generate\-\_\-alien\-\_\-count}!struct.h@{struct.\-h}}
-\subsubsection[{generate\-\_\-alien\-\_\-count}]{\setlength{\rightskip}{0pt plus 5cm}{\bf alien}$\ast$$\ast$ generate\-\_\-alien\-\_\-count (
-\begin{DoxyParamCaption}
-\item[{size\-\_\-t}]{count}
-\end{DoxyParamCaption}
-)}\label{struct_8h_a4abbc00c9d775d15dc685826b02406cc}
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em type}]Type of alien. \item[{\em height}]Height of alien. \item[{\em rank}]Rank of invading aliens. \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]Pointer to newly built alien. \end{Desc}
+\index{struct.h@{struct.h}!generate_alien_count@{generate\_\-alien\_\-count}}
+\index{generate_alien_count@{generate\_\-alien\_\-count}!struct.h@{struct.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\bf{alien}$\ast$$\ast$ generate\_\-alien\_\-count (size\_\-t {\em count})}\label{struct_8h_4abbc00c9d775d15dc685826b02406cc}
 
 
 Make an array of random aliens with a given size count. 
 
-
-\begin{DoxyParams}{Parameters}
-{\em n} & The number of elements in array. \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-A pointer to randomized array of aliens. 
-\end{DoxyReturn}
-
-
-References generate\-\_\-random\-\_\-alien().
-
-
-
-Referenced by main().
-
-\index{struct.\-h@{struct.\-h}!generate\-\_\-random\-\_\-alien@{generate\-\_\-random\-\_\-alien}}
-\index{generate\-\_\-random\-\_\-alien@{generate\-\_\-random\-\_\-alien}!struct.h@{struct.\-h}}
-\subsubsection[{generate\-\_\-random\-\_\-alien}]{\setlength{\rightskip}{0pt plus 5cm}{\bf alien}$\ast$ generate\-\_\-random\-\_\-alien (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)}\label{struct_8h_adce2ee9ad53436d50ad36034cacaf4b1}
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em n}]The number of elements in array. \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]A pointer to randomized array of aliens. \end{Desc}
+\index{struct.h@{struct.h}!generate_random_alien@{generate\_\-random\_\-alien}}
+\index{generate_random_alien@{generate\_\-random\_\-alien}!struct.h@{struct.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\bf{alien}$\ast$ generate\_\-random\_\-alien ()}\label{struct_8h_dce2ee9ad53436d50ad36034cacaf4b1}
 
 
 Generate a random alien with random type, height and rank. 
 
-\begin{DoxyReturn}{Returns}
-Randomized alien. 
-\end{DoxyReturn}
-
-
-References generate\-\_\-random\-\_\-int(), generate\-\_\-random\-\_\-string(), alien\-::height, mystrlen(), mystrndup(), alien\-::rank, and alien\-::type.
-
-
-
-Referenced by generate\-\_\-alien\-\_\-count(), and main().
-
-\index{struct.\-h@{struct.\-h}!generate\-\_\-random\-\_\-int@{generate\-\_\-random\-\_\-int}}
-\index{generate\-\_\-random\-\_\-int@{generate\-\_\-random\-\_\-int}!struct.h@{struct.\-h}}
-\subsubsection[{generate\-\_\-random\-\_\-int}]{\setlength{\rightskip}{0pt plus 5cm}int generate\-\_\-random\-\_\-int (
-\begin{DoxyParamCaption}
-\item[{int}]{min, }
-\item[{int}]{max}
-\end{DoxyParamCaption}
-)}\label{struct_8h_ad648b1aad3b03e6e8ac8db8197efd343}
+\begin{Desc}
+\item[Returns:]Randomized alien. \end{Desc}
+\index{struct.h@{struct.h}!generate_random_int@{generate\_\-random\_\-int}}
+\index{generate_random_int@{generate\_\-random\_\-int}!struct.h@{struct.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int generate\_\-random\_\-int (int {\em min}, int {\em max})}\label{struct_8h_d648b1aad3b03e6e8ac8db8197efd343}
 
 
 Generate a random number in range. 
 
-
-\begin{DoxyParams}{Parameters}
-{\em min} & Min randomized value . \\
-\hline
-{\em max} & Max randomized value. \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-Randomized number in range (min, max). 
-\end{DoxyReturn}
-
-
-Referenced by generate\-\_\-random\-\_\-alien().
-
-\index{struct.\-h@{struct.\-h}!generate\-\_\-random\-\_\-string@{generate\-\_\-random\-\_\-string}}
-\index{generate\-\_\-random\-\_\-string@{generate\-\_\-random\-\_\-string}!struct.h@{struct.\-h}}
-\subsubsection[{generate\-\_\-random\-\_\-string}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ generate\-\_\-random\-\_\-string (
-\begin{DoxyParamCaption}
-\item[{size\-\_\-t}]{length}
-\end{DoxyParamCaption}
-)}\label{struct_8h_aae29e50030db5b7eec24f334e5fb5d44}
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em min}]Min randomized value . \item[{\em max}]Max randomized value. \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]Randomized number in range (min, max). \end{Desc}
+\index{struct.h@{struct.h}!generate_random_string@{generate\_\-random\_\-string}}
+\index{generate_random_string@{generate\_\-random\_\-string}!struct.h@{struct.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ generate\_\-random\_\-string (size\_\-t {\em length})}\label{struct_8h_ae29e50030db5b7eec24f334e5fb5d44}
 
 
 Generate a random string of length. 
 
-
-\begin{DoxyParams}{Parameters}
-{\em length} & Max length of string. \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-Randomized string. 
-\end{DoxyReturn}
-
-
-Referenced by generate\-\_\-random\-\_\-alien().
-
-\index{struct.\-h@{struct.\-h}!print\-\_\-alien@{print\-\_\-alien}}
-\index{print\-\_\-alien@{print\-\_\-alien}!struct.h@{struct.\-h}}
-\subsubsection[{print\-\_\-alien}]{\setlength{\rightskip}{0pt plus 5cm}void print\-\_\-alien (
-\begin{DoxyParamCaption}
-\item[{{\bf alien} $\ast$}]{a}
-\end{DoxyParamCaption}
-)}\label{struct_8h_a3f1573acf08e9e31f221854df791ab06}
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em length}]Max length of string. \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]Randomized string. \end{Desc}
+\index{struct.h@{struct.h}!print_alien@{print\_\-alien}}
+\index{print_alien@{print\_\-alien}!struct.h@{struct.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void print\_\-alien (\bf{alien} $\ast$ {\em a})}\label{struct_8h_3f1573acf08e9e31f221854df791ab06}
 
 
 Print out an alien. 
 
-
-\begin{DoxyParams}{Parameters}
-{\em a} & The alien to print out. \\
-\hline
-\end{DoxyParams}
-
-
-References alien\-::height, alien\-::rank, and alien\-::type.
-
-
-
-Referenced by main(), and print\-\_\-alien\-\_\-count().
-
-\index{struct.\-h@{struct.\-h}!print\-\_\-alien\-\_\-count@{print\-\_\-alien\-\_\-count}}
-\index{print\-\_\-alien\-\_\-count@{print\-\_\-alien\-\_\-count}!struct.h@{struct.\-h}}
-\subsubsection[{print\-\_\-alien\-\_\-count}]{\setlength{\rightskip}{0pt plus 5cm}void print\-\_\-alien\-\_\-count (
-\begin{DoxyParamCaption}
-\item[{{\bf alien} $\ast$$\ast$}]{arr, }
-\item[{size\-\_\-t}]{count}
-\end{DoxyParamCaption}
-)}\label{struct_8h_a96c379831d4206c4a5670f8ab170f716}
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em a}]The alien to print out. \end{description}
+\end{Desc}
+\index{struct.h@{struct.h}!print_alien_count@{print\_\-alien\_\-count}}
+\index{print_alien_count@{print\_\-alien\_\-count}!struct.h@{struct.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void print\_\-alien\_\-count (\bf{alien} $\ast$$\ast$ {\em arr}, size\_\-t {\em count})}\label{struct_8h_96c379831d4206c4a5670f8ab170f716}
 
 
 Print an array of structs. 
 
-
-\begin{DoxyParams}{Parameters}
-{\em arr} & Array to print out. \\
-\hline
-{\em count} & Number of elements in array. \\
-\hline
-\end{DoxyParams}
-
-
-References print\-\_\-alien().
-
-
-
-Referenced by main().
-
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em arr}]Array to print out. \item[{\em count}]Number of elements in array. \end{description}
+\end{Desc}
